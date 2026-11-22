@@ -1,0 +1,18 @@
+# Copy to config/repos.yaml. Each repo uses either `remote` (mirrored under data_dir/repos)
+# or `path` (an existing local checkout).
+repos:
+  - name: acme/checkout-py
+    remote: https://github.com/acme/checkout-py.git
+    default_branch: main
+  - name: acme/billing-go
+    remote: https://github.com/acme/billing-go.git
+    default_branch: main
+  - name: acme/web-ts
+    path: /srv/checkouts/web-ts
+    default_branch: main
+
+# Extra glob patterns (fnmatch on repo-relative paths), on top of built-in defaults.
+generated_globs:
+  - "**/openapi/generated/**"
+exclude_globs:
+  - "**/third_party/**"

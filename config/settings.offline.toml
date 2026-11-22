@@ -1,0 +1,8 @@
+# Deterministic, key-free profile for CI, demos and smoke tests.
+profile = "offline"
+
+[offline]
+embedding_dim = 512
+
+[retrieval]
+query_expansion = true

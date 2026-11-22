@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.coverage
+data/
+.env
+eval/reports/*.json
+!eval/reports/fixture-offline.json
+!eval/reports/scale-offline.json
+.pytest_cache/

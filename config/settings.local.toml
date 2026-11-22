@@ -1,0 +1,16 @@
+profile = "local"
+
+[local]
+tei_code_embed_url = "http://tei-code:80"
+code_embedding_model = "nomic-ai/nomic-embed-code"
+code_embedding_dim = 3584
+tei_summary_embed_url = "http://tei-text:80"
+summary_embedding_model = "nomic-ai/nomic-embed-text-v1.5"
+summary_embedding_dim = 768
+tei_rerank_url = "http://tei-rerank:80"
+rerank_model = "BAAI/bge-reranker-v2-m3"
+vllm_url = "http://vllm:8000"
+vllm_model = "Qwen/Qwen2.5-Coder-32B-Instruct"
+
+[retrieval]
+query_expansion = true
