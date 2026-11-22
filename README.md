@@ -87,6 +87,7 @@ Requires Python 3.12+, [uv](https://docs.astral.sh/uv/) and git.
 
 ```bash
 uv sync
+make demo                  # index → graph → ask (JSON + SSE) → signed webhook re-index → guardrail
 make eval-fixture          # indexes the 6-repo fixture corpus and runs the 25-question benchmark
 make check                 # ruff + mypy --strict + 57 tests
 ```

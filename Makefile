@@ -39,6 +39,9 @@ eval: ## Full benchmark on eval/questions.jsonl
 eval-fixture: ## Index the fixture corpus and run the curated benchmark (no API keys needed)
 	$(UV) run python scripts/fixture_eval.py --profile $(PROFILE)
 
+demo: ## End-to-end demo through the HTTP API (index, ask JSON/SSE, webhook re-index, guardrail)
+	$(UV) run python scripts/demo.py --profile $(PROFILE)
+
 up: ## docker compose up (api + worker + qdrant + redis)
 	docker compose up -d --build
 
@@ -51,4 +54,4 @@ logs: ## Tail service logs
 docker-build: ## Build the runtime image
 	docker build -t code-rag:latest .
 
-.PHONY: help sync fmt lint type test test-unit test-int check index eval eval-fixture up down logs docker-build
+.PHONY: help sync fmt lint type test test-unit test-int check index eval eval-fixture demo up down logs docker-build
